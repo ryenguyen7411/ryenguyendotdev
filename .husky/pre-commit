@@ -1,0 +1,25 @@
+echo '\nChecking code quality before commit ...';
+
+# Check Prettier standards
+if yarn check-format; then
+  echo '✅ Prettier check passed';
+else
+  echo '🤢🤮🤢🤮 Prettier check failed. Run yarn format, add changes and try commit again 🤢🤮🤢🤮';
+  false;
+fi
+
+# Check ESLint Standards
+if yarn check-lint; then
+  echo '✅✅ ESLint check passed';
+else
+  echo '😤🏀👋😤 ESLint check failed. Make the required changes listed above, add changes and try to commit again 😤🏀👋😤';
+  false;
+fi
+
+# Check Typescript standards
+if yarn check-types; then
+  echo '✅✅✅ Typescript check passed';
+else
+  echo '🤡😂❌🤡 Typescript check failed 🤡😂❌🤡';
+  false;
+fi

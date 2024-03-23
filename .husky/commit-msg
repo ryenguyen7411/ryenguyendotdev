@@ -1,0 +1,11 @@
+echo '\nChecking commit msg quality before commit ...';
+
+if npx commitlint -g ./commitlint.config.cjs --edit $1; then
+  echo '✅✅✅✅ Commitlint check passed';
+else
+  echo '🤡😂❌🤡 Commitlint check failed 🤡😂❌🤡';
+  false;
+fi
+
+# If everything passes... Now we can commit
+echo '\n✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅';

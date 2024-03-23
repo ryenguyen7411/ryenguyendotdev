@@ -1,5 +1,5 @@
 :root {
-  --font-inter: inter, sans-serif;
+  --font-inter: "Inter var", system-ui, -apple-system, sans-serif;
 
   /* Yellow */
   --color-yellow-300: 255 224 130; /* #ffe082 */
@@ -31,6 +31,11 @@
   --color-magenta-500: 216 27 96; /* #d81b60 */
   --color-magenta-700: 194 24 91; /* #c2185b */
 
+  /* Indigo */
+  --color-indigo-300: 61 83 143; /* #3D538F */
+  --color-indigo-500: 49 66 114; /* #314272 */
+  --color-indigo-700: 31 41 71; /* #1F2947 */
+
   /* Gray */
   --color-gray-0: 255 255 255; /* #ffffff */
   --color-gray-100: 245 245 245; /* #f5f5f5 */
@@ -43,4 +48,47 @@
   --color-gray-800: 33 33 33; /* #212121 */
   --color-gray-900: 13 13 13; /* #0d0d0d */
   --color-gray-1000: 0 0 0; /* #000000 */
+}
+
+:root.dark {
+  /* Yellow */
+  --color-yellow-300: 255 179 0; /* #ffb300 */
+  --color-yellow-700: 255 224 130; /* #ffe082 */
+
+  /* Green */
+  --color-green-300: 27 94 32; /* #1b5e20 */
+  --color-green-700: 165 214 167; /* #a5d6a7 */
+
+  /* Orange */
+  --color-orange-300: 245 124 0; /* #f57c00 */
+  --color-orange-700: 255 167 38; /* #ffa726 */
+
+  /* Red */
+  --color-red-700: 229 115 115; /* #e57373 */
+  --color-red-300: 211 47 47; /* #d32f2f */
+
+  /* Blue */
+  --color-blue-300: 30 136 229; /* #1e88e5 */
+  --color-blue-700: 100 181 246; /* #64b5f6 */
+
+  /* Magenta */
+  --color-magenta-300: 194 24 91; /* #c2185b */
+  --color-magenta-700: 233 30 99; /* #e91e63 */
+
+    /* Indigo */
+  --color-indigo-300: 31 41 71; /* #1F2947 */
+  --color-indigo-700: 61 83 143; /* #3D538F */
+
+  /* Gray */
+  --color-gray-0: 0 0 0; /* #000000 */
+  --color-gray-100: 13 13 13; /* #0d0d0d */
+  --color-gray-200: 33 33 33; /* #212121 */
+  --color-gray-300: 48 48 48; /* #303030 */
+  --color-gray-400: 66 66 66; /* #424242 */
+  --color-gray-500: 97 97 97; /* #616161 */
+  --color-gray-600: 117 117 117; /* #757575 */
+  --color-gray-700: 189 189 189; /* #bdbdbd */
+  --color-gray-800: 238 238 238; /* #eeeeee */
+  --color-gray-900: 245 245 245; /* #f5f5f5 */
+  --color-gray-1000: 255 255 255; /* #ffffff */
 }

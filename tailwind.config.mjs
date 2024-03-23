@@ -52,6 +52,11 @@ export default {
         500: "rgb(var(--color-magenta-500) / <alpha-value>)",
         700: "rgb(var(--color-magenta-700) / <alpha-value>)",
       },
+      indigo: {
+        300: "rgb(var(--color-indigo-300) / <alpha-value>)",
+        500: "rgb(var(--color-indigo-500) / <alpha-value>)",
+        700: "rgb(var(--color-indigo-700) / <alpha-value>)",
+      },
       gray: {
         0: "rgb(var(--color-gray-0) / <alpha-value>)",
         100: "rgb(var(--color-gray-100) / <alpha-value>)",
@@ -81,6 +86,9 @@ export default {
       "2xl": ["32px", { lineHeight: "36px" }],
       "3xl": ["40px", { lineHeight: "44px" }],
       "4xl": ["48px", { lineHeight: "56px" }],
+    },
+    fontFamily: {
+      DEFAULT: "var(--font-inter)",
     },
     spacing: spacing.reduce(
       (res, unit) => ({ ...res, [unit]: unit * 5 + "px", [-unit]: -unit * 5 + "px" }),

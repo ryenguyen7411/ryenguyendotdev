@@ -1,8 +1,11 @@
-import eslintPluginAstro from "eslint-plugin-astro";
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 import fs from "fs";
+import { dirname } from "path";
 import path from "path";
+import { fileURLToPath } from "url";
+import typescriptEslintParser from "@typescript-eslint/parser";
+import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginAstro from "eslint-plugin-astro";
+import eslintPluginImport from "eslint-plugin-import";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,14 +16,18 @@ const gitignorePattern = fs
   .filter((line) => line && !line.startsWith("#"));
 
 export default [
-  // add more generic rule sets here, such as:
-  // js.configs.recommended,
-  ...eslintPluginAstro.configs["flat/recommended"],
   {
     ignores: [...gitignorePattern],
+  },
+  ...eslintPluginAstro.configs["flat/recommended"],
+  {
+    plugins: {
+      import: eslintPluginImport,
+    },
     rules: {
-      // override/add rules settings here, such as:
-      // "astro/no-set-html-directive": "error"
+      "sort-imports": ["error", { ignoreDeclarationSort: true }],
+      "import/order": ["error", { alphabetize: { order: "asc" }, "newlines-between": "never" }],
     },
   },
+  eslintConfigPrettier,
 ];
