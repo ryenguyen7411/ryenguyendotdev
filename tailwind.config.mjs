@@ -2,9 +2,9 @@ const spacing = [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40];
 
 /** @type {import('tailwindcss').Config} */
 export default {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   darkMode: "class",
-	theme: {
+  theme: {
     borderRadius: {
       none: "0",
       sm: "5px",
@@ -95,12 +95,12 @@ export default {
       {},
     ),
     lineHeight: spacing.reduce((res, item) => ({ ...res, [item]: item * 5 + "px" }), {}),
-		extend: {
+    extend: {
       backgroundImage: {
         "primary-gradient":
           "linear-gradient(30deg, rgb(var(--color-yellow-500)) 40%, rgb(var(--color-orange-500)))",
       },
     },
-	},
-	plugins: [],
-}
+  },
+  plugins: [],
+};

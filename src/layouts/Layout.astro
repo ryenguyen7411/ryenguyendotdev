@@ -1,4 +1,6 @@
 ---
+import "@/assets/styles/index.css";
+
 import { ViewTransitions } from "astro:transitions";
 import Header from "@/components/Header.astro";
 
@@ -24,8 +26,5 @@ const { title } = Astro.props;
   <body>
     <Header />
     <slot />
-    <style is:global>
-      @import "../assets/styles/index.css";
-    </style>
   </body>
 </html>
