@@ -1,5 +1,3 @@
-const spacing = [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 25, 30, 35, 40];
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
@@ -70,10 +68,6 @@ export default {
         900: "rgb(var(--color-gray-900) / <alpha-value>)",
         1000: "rgb(var(--color-gray-1000) / <alpha-value>)",
       },
-      primary: "rgb(var(--color-yellow-500) / <alpha-value>)",
-      success: "rgb(var(--color-green-500) / <alpha-value>)",
-      warning: "rgb(var(--color-orange-500) / <alpha-value>)",
-      danger: "rgb(var(--color-red-500) / <alpha-value>)",
     },
     fontSize: {
       xxs: ["10px", { lineHeight: "12px" }],
@@ -90,11 +84,13 @@ export default {
     fontFamily: {
       DEFAULT: "var(--font-inter)",
     },
-    spacing: spacing.reduce(
-      (res, unit) => ({ ...res, [unit]: unit * 5 + "px", [-unit]: -unit * 5 + "px" }),
-      {},
-    ),
-    lineHeight: spacing.reduce((res, item) => ({ ...res, [item]: item * 5 + "px" }), {}),
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "16px",
+        sm: "0",
+      },
+    },
     extend: {
       backgroundImage: {
         "primary-gradient":
@@ -102,5 +98,18 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: [
+      {
+        default: {
+          primary: "#ffd54f",
+          info: "#2196f3",
+          success: "#4caf50",
+          warning: "#ff9800",
+          error: "#f44336",
+        },
+      },
+    ],
+  },
 };

@@ -1,8 +1,4 @@
 @import url("./base/variables.css");
 @import url("./base/base.css");
 @import url("./base/components.css");
-
-@import url("./partials/hexagon-avatar.css");
-@import url("./partials/type-writter-anim.css");
-
 @import url("./base/ultilities.css");

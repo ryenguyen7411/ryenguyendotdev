@@ -1,15 +1,16 @@
 ---
 import RyengAvatar from "@/assets/images/ryeng-avatar.png";
+import Icon from "@/components/core/icon/index.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="ryenguyen7411 - Software Engineer">
-  <div class="container grid min-h-[500px] items-center gap-8 md:grid-cols-2">
-    <div class="flex flex-col gap-4">
+  <div class="container grid items-center gap-8 md:grid-cols-2">
+    <div class="flex flex-col gap-5">
       <p class="text-2xl font-bold">Hi 👋, it's me</p>
 
       <h1 class="self-start bg-primary text-gray-400">Rye Nguyen</h1>
-      <p class="text-2xl font-bold">
+      <p class="text-xl font-bold sm:text-2xl">
         I'm a&nbsp;<span class="typewriter"></span>
       </p>
       <p class="text-lg">
@@ -18,11 +19,33 @@ import Layout from "@/layouts/Layout.astro";
         impact on people's lives. I'm currently working at
         <a href="https://be.com.vn" class="text-primary">Be Group</a> as a software engineer.
       </p>
+
+      <div class="flex gap-4">
+        <div class="btn btn-circle btn-outline btn-primary">
+          <Icon name="facebook" />
+        </div>
+        <div class="btn btn-circle btn-outline btn-primary">
+          <Icon name="linkedin" />
+        </div>
+        <div class="btn btn-circle btn-outline btn-primary">
+          <Icon name="github" />
+        </div>
+        <div class="btn btn-circle btn-outline btn-primary">
+          <Icon name="email" />
+        </div>
+      </div>
+
+      <div class="btn btn-primary mt-4 self-start">Request CV copy</div>
     </div>
-    <div>
+    <div class="flex min-h-[600px] items-center">
       <div class="hexagon">
         <img src={RyengAvatar.src} alt="Rye Nguyen" class="rounded-lg" />
       </div>
     </div>
   </div>
 </Layout>
+
+<style>
+  @import "@/assets/styles/partials/hexagon-avatar.css";
+  @import "@/assets/styles/partials/typewriter-anim.css";
+</style>
