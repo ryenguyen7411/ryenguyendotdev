@@ -4,7 +4,7 @@
   --caret: currentcolor;
 
   &::before {
-    animation: typing 9s infinite;
+    animation: typing 12s infinite;
     content: "";
   }
 
@@ -16,7 +16,7 @@
 
   /* prettier-ignore */
   @keyframes typing {
-    0%, 33.33%, 66.66%, 100% { content: ""; }
+    0% { content: ""; }
     0.98% { content: "S"; }
     1.96% { content: "So"; }
     2.94% { content: "Sof"; }
@@ -33,25 +33,25 @@
     13.72% { content: "Software Engin"; }
     14.7% { content: "Software Engine"; }
     15.68% { content: "Software Enginee"; }
-    16.66%, 23.51% { content: "Software Engineer"; }
-    23.52% { content: "Software Enginee"; }
-    23.9% { content: "Software Engine"; }
-    24.28% { content: "Software Engin"; }
-    24.66% { content: "Software Engi"; }
-    25.04% { content: "Software Eng"; }
-    25.43% { content: "Software En"; }
-    25.81% { content: "Software E"; }
-    26.19% { content: "Software "; }
-    26.57% { content: "Software"; }
-    26.95% { content: "Softwar"; }
-    27.33% { content: "Softwa"; }
-    27.71% { content: "Softw"; }
-    28.09% { content: "Soft"; }
-    28.48% { content: "Sof"; }
-    28.86% { content: "So"; }
-    29.24% { content: "S"; }
-    29.62% { content: ""; }
-
+    16.66%, 23.99% { content: "Software Engineer"; }
+    24% { content: "Software Enginee"; }
+    24.25% { content: "Software Engine"; }
+    24.5% { content: "Software Engin"; }
+    24.75% { content: "Software Engi"; }
+    25% { content: "Software Eng"; }
+    25.25% { content: "Software En"; }
+    25.5% { content: "Software E"; }
+    25.75% { content: "Software "; }
+    26% { content: "Software"; }
+    26.25% { content: "Softwar"; }
+    26.5% { content: "Softwa"; }
+    26.75% { content: "Softw"; }
+    27% { content: "Soft"; }
+    27.25% { content: "Sof"; }
+    27.5% { content: "So"; }
+    27.75% { content: "S"; }
+    28% { content: ""; }
+    33.33% { content: ""; }
     34.37% { content: "F"; }
     35.41% { content: "Fr"; }
     36.46% { content: "Fro"; }
@@ -67,24 +67,24 @@
     46.87% { content: "Front-end Lea"; }
     47.92% { content: "Front-end Lead"; }
     48.96% { content: "Front-end Leade"; }
-    50%, 57.28% { content: "Front-end Leader"; }
-    57.29% { content: "Front-end Leade"; }
-    57.62% { content: "Front-end Lead"; }
-    57.94% { content: "Front-end Lea"; }
-    58.27% { content: "Front-end Le"; }
-    58.59% { content: "Front-end L"; }
-    58.92% { content: "Front-end "; }
-    59.24% { content: "Front-end"; }
-    59.57% { content: "Front-en"; }
-    59.9% { content: "Front-e"; }
-    60.22% { content: "Front-"; }
-    60.55% { content: "Front"; }
-    60.87% { content: "Fron"; }
+    50%, 57.99% { content: "Front-end Leader"; }
+    58% { content: "Front-end Leade"; }
+    58.27% { content: "Front-end Lead"; }
+    58.53% { content: "Front-end Lea"; }
+    58.8% { content: "Front-end Le"; }
+    59.07% { content: "Front-end L"; }
+    59.33% { content: "Front-end "; }
+    59.6% { content: "Front-end"; }
+    59.87% { content: "Front-en"; }
+    60.13% { content: "Front-e"; }
+    60.4% { content: "Front-"; }
+    60.67% { content: "Front"; }
+    60.93% { content: "Fron"; }
     61.2% { content: "Fro"; }
-    61.52% { content: "Fr"; }
-    61.85% { content: "F"; }
-    62.17% { content: ""; }
-
+    61.47% { content: "Fr"; }
+    61.73% { content: "F"; }
+    62% { content: ""; }
+    66.66% { content: ""; }
     67.85% { content: "V"; }
     69.04% { content: "Vi"; }
     70.23% { content: "Vim"; }
@@ -98,22 +98,24 @@
     79.75% { content: "Vim Enthusi"; }
     80.94% { content: "Vim Enthusia"; }
     82.13% { content: "Vim Enthusias"; }
-    83.32%, 90.46% { content: "Vim Enthusiast"; }
-    90.47% { content: "Vim Enthusias"; }
-    90.81% { content: "Vim Enthusia"; }
-    91.15% { content: "Vim Enthusi"; }
-    91.49% { content: "Vim Enthus"; }
-    91.83% { content: "Vim Enthu"; }
-    92.17% { content: "Vim Enth"; }
-    92.51% { content: "Vim Ent"; }
-    92.85% { content: "Vim En"; }
-    93.19% { content: "Vim E"; }
-    93.53% { content: "Vim "; }
-    93.87% { content: "Vim"; }
-    94.21% { content: "Vi"; }
-    94.55% { content: "V"; }
-    94.89% { content: ""; }
+    83.32%, 90.99% { content: "Vim Enthusiast"; }
+    91% { content: "Vim Enthusias"; }
+    91.35% { content: "Vim Enthusia"; }
+    91.69% { content: "Vim Enthusi"; }
+    92.04% { content: "Vim Enthus"; }
+    92.38% { content: "Vim Enthu"; }
+    92.73% { content: "Vim Enth"; }
+    93.08% { content: "Vim Ent"; }
+    93.42% { content: "Vim En"; }
+    93.77% { content: "Vim E"; }
+    94.12% { content: "Vim "; }
+    94.46% { content: "Vim"; }
+    94.81% { content: "Vi"; }
+    95.15% { content: "V"; }
+    95.5% { content: ""; }
+    100% { content: ""; }
   }
+
   /* prettier-ignore-end */
 
   @keyframes blink {
@@ -128,10 +130,6 @@
   }
 
   @media (prefers-reduced-motion) {
-    &::after {
-      animation: none;
-    }
-
     @keyframes sequence-popup {
       0%,
       100% {
@@ -149,7 +147,11 @@
 
     &::before {
       animation: sequence-popup 12s linear infinite;
-      content: "developer";
+      content: "Software Engineer";
+    }
+
+    &::after {
+      animation: none;
     }
   }
 }
