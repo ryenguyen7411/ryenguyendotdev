@@ -1,0 +1,155 @@
+.typewriter {
+  @apply text-primary;
+
+  --caret: currentcolor;
+
+  &::before {
+    animation: typing 9s infinite;
+    content: "";
+  }
+
+  &::after {
+    animation: blink 1s linear infinite;
+    border-right: 3px solid var(--caret);
+    content: "";
+  }
+
+  /* prettier-ignore */
+  @keyframes typing {
+    0%, 33.33%, 66.66%, 100% { content: ""; }
+    0.98% { content: "S"; }
+    1.96% { content: "So"; }
+    2.94% { content: "Sof"; }
+    3.92% { content: "Soft"; }
+    4.9% { content: "Softw"; }
+    5.88% { content: "Softwa"; }
+    6.86% { content: "Softwar"; }
+    7.84% { content: "Software"; }
+    8.82% { content: "Software "; }
+    9.8% { content: "Software E"; }
+    10.78% { content: "Software En"; }
+    11.76% { content: "Software Eng"; }
+    12.74% { content: "Software Engi"; }
+    13.72% { content: "Software Engin"; }
+    14.7% { content: "Software Engine"; }
+    15.68% { content: "Software Enginee"; }
+    16.66%, 23.51% { content: "Software Engineer"; }
+    23.52% { content: "Software Enginee"; }
+    23.9% { content: "Software Engine"; }
+    24.28% { content: "Software Engin"; }
+    24.66% { content: "Software Engi"; }
+    25.04% { content: "Software Eng"; }
+    25.43% { content: "Software En"; }
+    25.81% { content: "Software E"; }
+    26.19% { content: "Software "; }
+    26.57% { content: "Software"; }
+    26.95% { content: "Softwar"; }
+    27.33% { content: "Softwa"; }
+    27.71% { content: "Softw"; }
+    28.09% { content: "Soft"; }
+    28.48% { content: "Sof"; }
+    28.86% { content: "So"; }
+    29.24% { content: "S"; }
+    29.62% { content: ""; }
+
+    34.37% { content: "F"; }
+    35.41% { content: "Fr"; }
+    36.46% { content: "Fro"; }
+    37.5% { content: "Fron"; }
+    38.54% { content: "Front"; }
+    39.58% { content: "Front-"; }
+    40.62% { content: "Front-e"; }
+    41.67% { content: "Front-en"; }
+    42.71% { content: "Front-end"; }
+    43.75% { content: "Front-end "; }
+    44.79% { content: "Front-end L"; }
+    45.83% { content: "Front-end Le"; }
+    46.87% { content: "Front-end Lea"; }
+    47.92% { content: "Front-end Lead"; }
+    48.96% { content: "Front-end Leade"; }
+    50%, 57.28% { content: "Front-end Leader"; }
+    57.29% { content: "Front-end Leade"; }
+    57.62% { content: "Front-end Lead"; }
+    57.94% { content: "Front-end Lea"; }
+    58.27% { content: "Front-end Le"; }
+    58.59% { content: "Front-end L"; }
+    58.92% { content: "Front-end "; }
+    59.24% { content: "Front-end"; }
+    59.57% { content: "Front-en"; }
+    59.9% { content: "Front-e"; }
+    60.22% { content: "Front-"; }
+    60.55% { content: "Front"; }
+    60.87% { content: "Fron"; }
+    61.2% { content: "Fro"; }
+    61.52% { content: "Fr"; }
+    61.85% { content: "F"; }
+    62.17% { content: ""; }
+
+    67.85% { content: "V"; }
+    69.04% { content: "Vi"; }
+    70.23% { content: "Vim"; }
+    71.42% { content: "Vim "; }
+    72.61% { content: "Vim E"; }
+    73.8% { content: "Vim En"; }
+    74.99% { content: "Vim Ent"; }
+    76.18% { content: "Vim Enth"; }
+    77.37% { content: "Vim Enthu"; }
+    78.56% { content: "Vim Enthus"; }
+    79.75% { content: "Vim Enthusi"; }
+    80.94% { content: "Vim Enthusia"; }
+    82.13% { content: "Vim Enthusias"; }
+    83.32%, 90.46% { content: "Vim Enthusiast"; }
+    90.47% { content: "Vim Enthusias"; }
+    90.81% { content: "Vim Enthusia"; }
+    91.15% { content: "Vim Enthusi"; }
+    91.49% { content: "Vim Enthus"; }
+    91.83% { content: "Vim Enthu"; }
+    92.17% { content: "Vim Enth"; }
+    92.51% { content: "Vim Ent"; }
+    92.85% { content: "Vim En"; }
+    93.19% { content: "Vim E"; }
+    93.53% { content: "Vim "; }
+    93.87% { content: "Vim"; }
+    94.21% { content: "Vi"; }
+    94.55% { content: "V"; }
+    94.89% { content: ""; }
+  }
+  /* prettier-ignore-end */
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    &::after {
+      animation: none;
+    }
+
+    @keyframes sequence-popup {
+      0%,
+      100% {
+        content: "Software Engineer";
+      }
+
+      33.33% {
+        content: "Front-end Leader";
+      }
+
+      66.66% {
+        content: "Vim Enthusiast";
+      }
+    }
+
+    &::before {
+      animation: sequence-popup 12s linear infinite;
+      content: "developer";
+    }
+  }
+}

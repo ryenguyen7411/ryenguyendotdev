@@ -1,0 +1,45 @@
+.hexagon {
+  @apply relative;
+  @apply mx-auto h-[185px] w-[300px];
+  @apply rounded-lg bg-primary;
+
+  animation: hexagon-move 5s infinite;
+  box-shadow: 0 40px 150px rgb(var(--color-yellow-700) / 100%);
+
+  &::before,
+  &::after {
+    @apply content-[""];
+    @apply absolute h-full w-full;
+    @apply rounded-lg bg-primary;
+  }
+
+  &::before {
+    @apply rotate-[60deg];
+  }
+
+  &::after {
+    @apply rotate-[-60deg];
+  }
+
+  img {
+    @apply absolute top-1/2 -translate-y-1/2;
+    @apply mt-[50px] h-[500px] w-[300px] object-cover object-top;
+    @apply z-10;
+
+    clip-path: polygon(0 0, 100% 0, 100% 285px, 52% 368px, 48% 368px, 0 285px);
+  }
+
+  @keyframes hexagon-move {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
