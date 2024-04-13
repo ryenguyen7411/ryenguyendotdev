@@ -2,21 +2,65 @@
 
 ---
 
-<header>
-  <div class="container flex h-15 items-center justify-between">
-    <a href="/" class="logo text-lg font-bold">
-      🚀 <span class="bg-primary-gradient bg-clip-text text-transparent">ryenguyen7411</span>
-    </a>
+<div class="drawer">
+  <input id="sidebar-nav" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col">
+    <!-- Navbar -->
+    <div class="container navbar md:justify-between">
+      <div class="flex-none md:hidden">
+        <label for="sidebar-nav" aria-label="open sidebar" class="btn btn-square btn-ghost">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="inline-block h-6 w-6 stroke-current"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path></svg
+          >
+        </label>
+      </div>
 
-    <nav>
-      <ul class="flex items-center">
+      <a href="/" class="logo text-lg font-bold">
+        🚀&nbsp;<span class="bg-primary-gradient bg-clip-text text-transparent">ryenguyen7411</span>
+      </a>
+      <nav class="hidden flex-none md:block">
+        <ul class="flex items-center gap-4">
+          {/* TODO: handle active link */}
+          <li><a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/">Home</a></li>
+          <li><a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/about">About</a></li>
+          <li><a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/blog">Blog</a></li>
+          <li>
+            <a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/contact">Contact</a>
+          </li>
+        </ul>
+        {/* TODO: show CTA button */}
+      </nav>
+    </div>
+  </div>
+  <div class="drawer-side">
+    <label for="sidebar-nav" aria-label="close sidebar" class="drawer-overlay"></label>
+    <nav class="min-h-screen bg-indigo-300">
+      <ul class="menu grid w-60 gap-4">
         {/* TODO: handle active link */}
+        <li>
+          <a href="/" class="logo text-lg font-bold">
+            🚀&nbsp;<span class="bg-primary-gradient bg-clip-text text-transparent"
+              >ryenguyen7411</span
+            >
+          </a>
+        </li>
+        <li><a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/">Home</a></li>
         <li><a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/about">About</a></li>
         <li><a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/blog">Blog</a></li>
-        <li><a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/contact">Contact</a></li>
+        <li>
+          <a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/contact">Contact</a>
+        </li>
       </ul>
 
       {/* TODO: show CTA button */}
     </nav>
   </div>
-</header>
+</div>

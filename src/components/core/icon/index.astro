@@ -1,0 +1,19 @@
+---
+interface Props {
+  name: string;
+}
+
+// Import the file system module
+import fs from "fs";
+import path from "path";
+
+// Define a helper function to read the SVG file
+function getSvgContent(name: string) {
+  const filePath = path.join(process.cwd(), "src", "assets", "icons", `${name}.svg`);
+  return fs.readFileSync(filePath, "utf-8");
+}
+
+const { name } = Astro.props;
+---
+
+<Fragment set:html={name ? getSvgContent(name) : undefined} />

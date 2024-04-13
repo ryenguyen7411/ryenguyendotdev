@@ -2,7 +2,6 @@ import fs from "fs";
 import { dirname } from "path";
 import path from "path";
 import { fileURLToPath } from "url";
-import typescriptEslintParser from "@typescript-eslint/parser";
 import eslintConfigPrettier from "eslint-config-prettier";
 import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginImport from "eslint-plugin-import";
