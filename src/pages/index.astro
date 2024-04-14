@@ -2,16 +2,17 @@
 import RyengAvatar from "@/assets/images/ryeng-avatar.png";
 import Icon from "@/components/core/icon/index.astro";
 import Layout from "@/layouts/Layout.astro";
+import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settings/constants.ts";
 ---
 
 <Layout title="ryenguyen7411 - Software Engineer">
   <div class="container grid items-center gap-8 md:grid-cols-2">
     <div class="flex flex-col gap-5">
-      <p class="text-2xl font-bold">Hi 👋, it's me</p>
+      <p class="text-2xl font-semibold">Hi 👋, it's me</p>
 
-      <h1 class="self-start bg-primary text-gray-400">Rye Nguyen</h1>
-      <p class="text-xl font-bold sm:text-2xl">
-        I'm a&nbsp;<span class="typewriter"></span>
+      <h1 class="self-start bg-primary font-semibold text-gray-400">Rye Nguyen</h1>
+      <p class="text-xl sm:text-2xl">
+        I'm a&nbsp;<span class="typewriter font-semibold"></span>
       </p>
       <p class="text-lg">
         with 7+ years of experience in Software Development, specifically focused on React.js,
@@ -43,9 +44,78 @@ import Layout from "@/layouts/Layout.astro";
       </div>
     </div>
   </div>
-</Layout>
 
-<style>
-  @import "@/assets/styles/partials/hexagon-avatar.css";
-  @import "@/assets/styles/partials/typewriter-anim.css";
-</style>
+  <div class="container grid gap-32 sm:grid-cols-2">
+    <div class="flex flex-col gap-8">
+      <div class="flex-1"></div>
+
+      <h2 class="text-3xl">Services |<br />Offer</h2>
+      <p class="md:mr-32">
+        Lorem esse est elit ea sint Dolor odit aperiam qui natus maiores error reiciendis. Dolore
+        obcaecati hic molestias voluptatem nihil. Reprehenderit nisi porro nostrum necessitatibus
+        optio magnam. Quos error doloremque
+      </p>
+
+      <div class="flex-2"></div>
+
+      <ul class="flex items-stretch justify-between gap-4 text-center">
+        {
+          SERVICES_OFFER_HIGHLIGHT.map((service, idx) => (
+            <>
+              <li>
+                <h3 class="text-2xl text-primary">{service.title}</h3>
+                <p>{service.description}</p>
+              </li>
+              {idx < SERVICES_OFFER_HIGHLIGHT.length - 1 && (
+                <li class="divider divider-neutral divider-horizontal" />
+              )}
+            </>
+          ))
+        }
+      </ul>
+    </div>
+    <ul class="grid gap-8">
+      {
+        SERVICES_OFFER.map((service) => (
+          <li class="grid grid-cols-[1fr,80px] items-center gap-3">
+            <h3 class="text-2xl">{service.title}</h3>
+            <div class="btn btn-circle btn-primary row-span-2">
+              <Icon name={service.icon} />
+            </div>
+            <p>{service.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="col-span-2">
+      <h2>Skills cloud</h2>
+      <ul>
+        {
+          SKILLS_CLOUD.core.map((skill) => (
+            <li>
+              <Icon name={skill.icon} />
+              <span>{skill.title}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <ul>
+        {
+          SKILLS_CLOUD.other.map((skill) => (
+            <li>
+              <Icon name={skill.icon} />
+              <span>{skill.title}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <style>
+    @import "@/assets/styles/partials/hexagon-avatar.css";
+    @import "@/assets/styles/partials/typewriter-anim.css";
+  </style>
+</Layout>

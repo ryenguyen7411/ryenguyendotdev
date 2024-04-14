@@ -96,6 +96,9 @@ export default {
         "primary-gradient":
           "linear-gradient(30deg, rgb(var(--color-yellow-500)) 40%, rgb(var(--color-orange-500)))",
       },
+      flex: {
+        2: "2 2 0%",
+      },
     },
   },
   plugins: [require("daisyui")],
@@ -108,6 +111,7 @@ export default {
           success: "#4caf50",
           warning: "#ff9800",
           error: "#f44336",
+          neutral: "#616161",
         },
       },
     ],

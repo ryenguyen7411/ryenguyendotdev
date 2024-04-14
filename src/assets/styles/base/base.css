@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply bg-indigo-300 font text text-gray-800;
+    @apply bg-indigo-300 font text font-light text-gray-800;
   }
 
   ::-webkit-scrollbar-track {
@@ -23,27 +23,27 @@
 
 @layer components {
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-3xl font-medium;
   }
 
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-2xl font-medium;
   }
 
   h3 {
-    @apply text-xl font-bold;
+    @apply text-xl font-medium;
   }
 
   h4 {
-    @apply text-lg font-bold;
+    @apply text-lg font-medium;
   }
 
   h5 {
-    @apply text-md font-bold;
+    @apply text-md font-medium;
   }
 
   h6 {
-    @apply text font-bold;
+    @apply text font-medium;
   }
 
   a {
@@ -64,5 +64,9 @@
 
   .container {
     @apply mx-auto;
+
+    @screen md {
+      max-width: 1180px;
+    }
   }
 }
