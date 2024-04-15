@@ -1,5 +1,5 @@
 :root {
-  --font-inter: "Inter var", system-ui, -apple-system, sans-serif;
+  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
 
   /* Yellow */
   --color-yellow-300: 255 224 130; /* #ffe082 */

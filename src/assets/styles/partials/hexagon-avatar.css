@@ -26,7 +26,7 @@
     @apply mt-[50px] h-[500px] w-[300px] object-cover object-top;
     @apply z-10;
 
-    clip-path: polygon(0 0, 100% 0, 100% 285px, 52% 368px, 48% 368px, 0 285px);
+    clip-path: polygon(0 0, 100% 0, 100% 285px, 53% 367px, 50% 368px, 47% 367px, 0 285px);
   }
 
   @keyframes hexagon-move {
@@ -41,5 +41,9 @@
     100% {
       transform: translateY(0);
     }
+  }
+
+  @media (prefers-reduced-motion) {
+    animation: none;
   }
 }
