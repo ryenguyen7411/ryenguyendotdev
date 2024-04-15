@@ -7,10 +7,10 @@ import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settin
 
 <Layout title="ryenguyen7411 - Software Engineer">
   <div class="container grid items-center gap-8 md:grid-cols-2">
-    <div class="flex flex-col gap-5">
+    <div class="grid gap-5">
       <p class="text-2xl font-semibold">Hi 👋, it's me</p>
 
-      <h1 class="self-start bg-primary font-semibold text-gray-400">Rye Nguyen</h1>
+      <h1 class="place-self-start bg-primary font-semibold text-gray-400">Rye Nguyen</h1>
       <p class="text-xl sm:text-2xl">
         I'm a&nbsp;<span class="typewriter font-semibold"></span>
       </p>
@@ -18,7 +18,7 @@ import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settin
         with 7+ years of experience in Software Development, specifically focused on React.js,
         Node.js, and React Native. I'm passionate about building products that make a positive
         impact on people's lives. I'm currently working at
-        <a href="https://be.com.vn" class="text-primary">Be Group</a> as a software engineer.
+        <a href="https://be.com.vn" class="font-semibold text-primary">Be Group</a> as a software engineer.
       </p>
 
       <div class="flex gap-4">
@@ -36,7 +36,7 @@ import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settin
         </div>
       </div>
 
-      <div class="btn btn-primary mt-4 self-start">Request CV copy</div>
+      <div class="btn btn-primary mt-4 place-self-start">Request CV copy</div>
     </div>
     <div class="flex min-h-[600px] items-center">
       <div class="hexagon">
@@ -56,9 +56,9 @@ import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settin
         optio magnam. Quos error doloremque
       </p>
 
-      <div class="flex-2"></div>
+      <div class="flex-1"></div>
 
-      <ul class="flex items-stretch justify-between gap-4 text-center">
+      <ul class="grid grid-flow-col gap-4 text-center">
         {
           SERVICES_OFFER_HIGHLIGHT.map((service, idx) => (
             <>
@@ -88,34 +88,46 @@ import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settin
       }
     </ul>
 
-    <div class="col-span-2">
-      <h2>Skills cloud</h2>
-      <ul>
-        {
-          SKILLS_CLOUD.core.map((skill) => (
-            <li>
-              <Icon name={skill.icon} />
-              <span>{skill.title}</span>
-            </li>
-          ))
-        }
-      </ul>
+    <div class="col-span-2 grid place-items-center gap-8">
+      <h2 class="text-3xl">Skills cloud</h2>
 
-      <ul>
-        {
-          SKILLS_CLOUD.other.map((skill) => (
-            <li>
-              <Icon name={skill.icon} />
-              <span>{skill.title}</span>
-            </li>
-          ))
-        }
-      </ul>
+      <div class="scroller" data-speed="fast">
+        <ul class="scroller__inner">
+          {
+            SKILLS_CLOUD.core.map((skill) => (
+              <li class="flex items-center gap-1">
+                <span>{skill.title}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="scroller" data-direction="right">
+        <ul class="scroller__inner">
+          {
+            SKILLS_CLOUD.other.map((skill) => (
+              <li class="flex items-center gap-1">
+                <span>{skill.title}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
   </div>
 
-  <style>
-    @import "@/assets/styles/partials/hexagon-avatar.css";
-    @import "@/assets/styles/partials/typewriter-anim.css";
-  </style>
+  <div class="h-[400px]"></div>
 </Layout>
+
+<style>
+  @import "@/assets/styles/partials/hexagon-avatar.css";
+  @import "@/assets/styles/partials/typewriter-anim.css";
+  @import "@/assets/styles/partials/scroller.css";
+</style>
+
+<script>
+  import { addScrollerAnimation } from "@/utils/scroller.ts";
+
+  addScrollerAnimation();
+</script>

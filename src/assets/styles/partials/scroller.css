@@ -1,0 +1,45 @@
+.scroller {
+  max-width: 600px;
+
+  &[data-animated="true"] {
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    overflow: hidden;
+  }
+
+  &[data-animated="true"] .scroller__inner {
+    animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear
+      infinite;
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+
+  &[data-direction="right"] {
+    --animation-direction: reverse;
+  }
+
+  &[data-direction="left"] {
+    --animation-direction: forwards;
+  }
+
+  &[data-speed="fast"] {
+    --animation-duration: 20s;
+  }
+
+  &[data-speed="slow"] {
+    --animation-duration: 60s;
+  }
+
+  .scroller__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding-block: 1rem;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}

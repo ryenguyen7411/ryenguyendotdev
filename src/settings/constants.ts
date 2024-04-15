@@ -38,79 +38,35 @@ export const SERVICES_OFFER = [
 
 export const SKILLS_CLOUD = {
   core: [
-    {
-      title: "HTML",
-      icon: "html",
-    },
-    {
-      title: "CSS",
-      icon: "css",
-    },
-    {
-      title: "JavaScript",
-      icon: "javascript",
-    },
-    {
-      title: "React",
-      icon: "react",
-    },
-    {
-      title: "Node",
-      icon: "node",
-    },
-    {
-      title: "MongoDB",
-      icon: "mongodb",
-    },
+    { title: "React.js" },
+    { title: "Next.js" },
+    { title: "React Native" },
+    { title: "Tailwind CSS" },
+    { title: "Styled Component" },
+    { title: "Storybook" },
+    { title: "Vue.js" },
+    { title: "WordPress" },
+    { title: "React Query" },
+    { title: "Redux" },
   ],
   other: [
-    {
-      title: "MongoDB",
-      icon: "mongodb",
-    },
-    {
-      title: "Express",
-      icon: "express",
-    },
-    {
-      title: "Angular",
-      icon: "angular",
-    },
-    {
-      title: "Vue",
-      icon: "vue",
-    },
-    {
-      title: "Svelte",
-      icon: "svelte",
-    },
-    {
-      title: "Next",
-      icon: "next",
-    },
-    {
-      title: "Gatsby",
-      icon: "gatsby",
-    },
-    {
-      title: "Nest",
-      icon: "nest",
-    },
-    {
-      title: "Flutter",
-      icon: "flutter",
-    },
-    {
-      title: "Dart",
-      icon: "dart",
-    },
-    {
-      title: "TypeScript",
-      icon: "typescript",
-    },
-    {
-      title: "JavaScript",
-      icon: "javascript",
-    },
+    { title: "Remix.js" },
+    { title: "Web3" },
+    { title: "Astro.js" },
+    { title: "Svelte" },
+    { title: "Vite.js" },
+    { title: "PostgreSQL" },
+    { title: "MongoDB" },
+    { title: "Prisma" },
+    { title: "Elastic search" },
+    { title: "NginX" },
+    { title: "Webpack" },
+    { title: "jQuery" },
+    { title: "Laravel" },
+    { title: "CodeIgniter" },
+    { title: "Docker" },
+    { title: "Node.js" },
+    { title: "Deno.js" },
+    { title: "Bun.js" },
   ],
 };
