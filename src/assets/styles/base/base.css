@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    @apply bg-indigo-300 font text font-light text-gray-800;
+    @apply bg-gray-200 font text font-light text-gray-800;
   }
 
   ::-webkit-scrollbar-track {

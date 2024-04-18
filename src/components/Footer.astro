@@ -1,0 +1,84 @@
+---
+import cx from "classix";
+import Icon from "@/components/core/icon/index.astro";
+---
+
+<div class="mt-8 border-t-8 border-gray-300">
+  <footer class="container footer grid gap-x-32 gap-y-8 py-8 sm:grid-cols-2">
+    <aside class="grid gap-4">
+      <a href="/" class="logo text-lg font-semibold">
+        🚀&nbsp;<span class="bg-primary-gradient bg-clip-text text-transparent">ryenguyen7411</span>
+      </a>
+
+      <p class="">Ipsum neque minima repellat blanditiis in repudiandae officia. Eligendi quia.</p>
+
+      <p class="text-xl font-bold">
+        Ask your questions or contact me in a way that's convenient for you
+      </p>
+    </aside>
+    <nav>
+      <p class="mb-3 text-lg">I typically respond within two hours</p>
+
+      <div class="form-control grid w-full gap-3">
+        <input
+          class={cx(
+            "input input-bordered bg-transparent",
+            "focus:border-primary focus:outline-primary",
+            "placeholder:text-gray-500",
+          )}
+          placeholder="How can I address you?"
+          required
+        />
+        <input
+          class={cx(
+            "input input-bordered bg-transparent",
+            "focus:border-primary focus:outline-primary",
+            "placeholder:text-gray-500",
+          )}
+          placeholder="Contact method: link to social media, email, phone number, etc."
+          required
+        />
+        <input
+          class={cx(
+            "input input-bordered bg-transparent",
+            "focus:border-primary focus:outline-primary",
+            "placeholder:text-gray-500",
+          )}
+          placeholder="Tell me about your project"
+          required
+        />
+
+        <button class="btn btn-primary place-self-start">Send</button>
+
+        <p class="italic text-gray-500">
+          * By clicking "Send", you consent to the processing of your personal data
+        </p>
+      </div>
+    </nav>
+  </footer>
+  <footer class="container footer border-t border-gray-300 py-4">
+    <aside class="grid-flow-col items-center gap-3">
+      🚀
+      <p>
+        ryenguyen7411<br />Adipisicing quos nihil corrupti odio dignissimos! Tempora aspernatur
+        neque perferendis.
+      </p>
+    </aside>
+    <nav class="place-self-center justify-self-end">
+      <div class="grid grid-flow-col gap-4">
+        <div class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
+          <Icon name="facebook" />
+        </div>
+        <div class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
+          <Icon name="linkedin" />
+        </div>
+        <div class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
+          <Icon name="github" />
+        </div>
+        <div class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
+          <Icon name="email" />
+        </div>
+      </div>
+    </nav>
+  </footer>
+</div>
