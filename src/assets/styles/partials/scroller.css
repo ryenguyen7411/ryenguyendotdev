@@ -1,5 +1,5 @@
 .scroller {
-  max-width: 600px;
+  width: 100%;
 
   &[data-animated="true"] {
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);

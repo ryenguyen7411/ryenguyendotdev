@@ -23,6 +23,7 @@
     "@commitlint/cli": "^19.2.1",
     "@commitlint/config-conventional": "^19.1.0",
     "astro": "^4.5.8",
+    "classix": "^2.1.37",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.3"
   },

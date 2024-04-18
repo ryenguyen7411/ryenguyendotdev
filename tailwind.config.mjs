@@ -88,8 +88,20 @@ export default {
       center: true,
       padding: {
         DEFAULT: "16px",
-        sm: "0",
+        sm: "24px",
       },
+    },
+    screens: {
+      xs: "580px",
+      sm: "768px",
+      md: "980px",
+      lg: "1200px",
+      xl: "1600px",
+      "-xs": { max: "579px" },
+      "-sm": { max: "767px" },
+      "-md": { max: "979px" },
+      "-lg": { max: "1199px" },
+      "-xl": { max: "1599px" },
     },
     extend: {
       backgroundImage: {
