@@ -3,7 +3,12 @@ import cx from "classix";
 import RyengAvatar from "@/assets/images/ryeng-avatar.png";
 import Icon from "@/components/core/icon/index.astro";
 import Layout from "@/layouts/Layout.astro";
-import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settings/constants.ts";
+import {
+  SERVICES_OFFER,
+  SERVICES_OFFER_HIGHLIGHT,
+  SKILLS_CLOUD,
+  TESTIMONIALS,
+} from "@/settings/constants.ts";
 ---
 
 <Layout title="ryenguyen7411 - Software Engineer">
@@ -115,6 +120,37 @@ import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settin
           }
         </ul>
       </div>
+    </div>
+  </div>
+
+  <div class={cx("container mt-16 flex flex-col items-center", "md:mt-32")}>
+    <p>Testimonial</p>
+    <h2 class="max-w-[600px] text-center">
+      I have worked with various companies to help them grow their business.
+    </h2>
+
+    <div class="carousel mt-8 w-full gap-4 rounded-box pb-4">
+      {
+        TESTIMONIALS.map((testimonial) => (
+          <div
+            class={cx(
+              "card carousel-item flex-col bg-gray-300",
+              "max-w-full sm:max-w-[calc(50%-8px)] md:max-w-[calc(100%/3-32px/3)]",
+            )}
+          >
+            <div class="card-body">
+              <p>{testimonial.description}</p>
+              <div class="flex items-center gap-3">
+                <img src={testimonial.avatar} alt={testimonial.name} class="w-10 rounded-full" />
+                <div class="flex-1">
+                  <h3 class="text">{testimonial.name}</h3>
+                  <p>{testimonial.designation}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))
+      }
     </div>
   </div>
 </Layout>

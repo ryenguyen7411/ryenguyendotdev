@@ -70,3 +70,41 @@ export const SKILLS_CLOUD = {
     { title: "Bun.js" },
   ],
 };
+
+export const TESTIMONIALS = [
+  {
+    avatar: "https://i.pravatar.cc/50",
+    name: "Ryan Ho",
+    designation: "CEO, Goonma",
+    description:
+      "Sit beatae quidem eius architecto corporis soluta Soluta amet nam dolores repudiandae amet ullam In numquam eveniet repudiandae voluptates quae rerum odit, numquam. Reprehenderit error",
+  },
+  {
+    avatar: "https://i.pravatar.cc/50",
+    name: "Yusaku Senga",
+    designation: "CEO, Swingby Network",
+    description:
+      "Amet doloribus dolor consequuntur veritatis odio A aliquid ab accusamus est dolorum Quos a nesciunt quis ut enim at suscipit? Odit amet unde eos iusto dolores. Veritatis eligendi cupiditate quae",
+  },
+  {
+    avatar: "https://i.pravatar.cc/50",
+    name: "Thomas Nguyen",
+    designation: "Engineering Manager, Be Group",
+    description:
+      "Sit veritatis ducimus perspiciatis similique ea iusto mollitia accusantium Ipsum quidem laborum sint tempora tempora, temporibus Nisi excepturi numquam culpa",
+  },
+  {
+    avatar: "https://i.pravatar.cc/50",
+    name: "Thinh Nguyen",
+    designation: "CTO, Lozi",
+    description:
+      "Consectetur ab reiciendis deserunt ea porro? Cumque repellendus nulla quis quas praesentium dolorum. Ad neque architecto officia accusantium quod, blanditiis.",
+  },
+  {
+    avatar: "https://i.pravatar.cc/50",
+    name: "Thanh Ngo",
+    designation: "Head of CS Department, HCM UIT",
+    description:
+      "Sit beatae quidem eius architecto corporis soluta Soluta amet nam dolores repudiandae amet ullam In numquam eveniet repudiandae voluptates quae rerum odit, numquam. Reprehenderit error",
+  },
+];
