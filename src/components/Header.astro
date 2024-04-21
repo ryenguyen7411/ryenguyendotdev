@@ -2,12 +2,12 @@
 import Icon from "@/components/core/icon/index.astro";
 ---
 
-<div class="container drawer">
+<div class="container drawer -sm:p-0">
   <input id="sidebar-nav" type="checkbox" class="drawer-toggle" />
   <!-- Navbar -->
   <div class="drawer-content">
-    <div class="container navbar md:justify-between">
-      <div class="flex-none md:hidden">
+    <div class="navbar sm:justify-between">
+      <div class="flex-none sm:hidden">
         <label for="sidebar-nav" aria-label="open sidebar" class="btn btn-square btn-ghost">
           <Icon name="head-menu" />
         </label>
@@ -16,7 +16,7 @@ import Icon from "@/components/core/icon/index.astro";
       <a href="/" class="logo text-lg font-semibold">
         🚀&nbsp;<span class="bg-primary-gradient bg-clip-text text-transparent">ryenguyen7411</span>
       </a>
-      <nav class="hidden flex-none md:block">
+      <nav class="hidden flex-none sm:block">
         <ul class="flex items-center gap-4">
           {/* TODO: handle active link */}
           <li><a class="px-2 py-1 text-gray-700 hover:text-gray-500" href="/">Home</a></li>

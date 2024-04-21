@@ -1,6 +1,12 @@
+import LogoLoship from "@/assets/images/logo-loship.png";
+import LogoBeGroup from "@/assets/images/logo-begroup.svg";
+import LogoGoonma from "@/assets/images/logo-goonma.svg";
+import LogoSwingbyNetwork from "@/assets/images/logo-swingby.svg";
+import LogoMetawire from "@/assets/images/logo-metawire.png";
+
 export const SERVICES_OFFER_HIGHLIGHT = [
   {
-    title: "1600+",
+    title: "100+",
     description: "Ipsum sequi doloremque inventore ad",
   },
   {
@@ -106,5 +112,89 @@ export const TESTIMONIALS = [
     designation: "Head of CS Department, HCM UIT",
     description:
       "Sit beatae quidem eius architecto corporis soluta Soluta amet nam dolores repudiandae amet ullam In numquam eveniet repudiandae voluptates quae rerum odit, numquam. Reprehenderit error",
+  },
+];
+
+export const PARTNERS = [
+  {
+    name: "Loship",
+    logo: LogoLoship.src,
+  },
+  {
+    name: "Be Group",
+    logo: LogoBeGroup.src,
+  },
+  {
+    name: "Goonma",
+    logo: LogoGoonma.src,
+  },
+  {
+    name: "Swingby Network",
+    logo: LogoSwingbyNetwork.src,
+  },
+  {
+    name: "Metawire",
+    logo: LogoMetawire.src,
+  },
+  {
+    name: "Lozi",
+    logo: LogoLoship.src,
+  },
+  {
+    name: "Self Plus",
+    logo: LogoBeGroup.src,
+  },
+  {
+    name: "Intuchi",
+    logo: LogoGoonma.src,
+  },
+  {
+    name: "Mobytelab",
+    logo: LogoSwingbyNetwork.src,
+  },
+  {
+    name: "Citynow",
+    logo: LogoMetawire.src,
+  },
+];
+
+export const PARTNERS_HIGHLIGHT = [
+  {
+    title: "1600+",
+    description: "Ipsum sequi doloremque inventore ad",
+  },
+  {
+    title: "80%",
+    description: "Adipisicing assumenda laudantium ipsum",
+  },
+  {
+    title: "4.7",
+    description: "Ipsum maxime odit impedit minima",
+  },
+];
+
+export const WORK_EXPERIENCES = [
+  {
+    title: "Software Engineer",
+    company: "Citynow Co., Ltd",
+    location: "Ho Chi Minh, Vietnam",
+    startDate: "Jan 2017",
+    endDate: "Apr 2018",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+  },
+  {
+    title: "Sr. Software Engineer / Lead Front-end Engineer",
+    company: "Lozi Vietnam Joint Stock Company",
+    location: "Ho Chi Minh, Vietnam",
+    startDate: "May 2018",
+    endDate: "Sep 2023",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
+  },
+  {
+    title: "Sr. Software Engineer",
+    company: "Be Group Joint Stock Company",
+    location: "Ho Chi Minh, Vietnam",
+    startDate: "Oct 2023",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
   },
 ];

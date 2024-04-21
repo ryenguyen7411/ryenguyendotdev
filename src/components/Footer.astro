@@ -24,7 +24,7 @@ import Icon from "@/components/core/icon/index.astro";
           class={cx(
             "input input-bordered bg-transparent",
             "focus:border-primary focus:outline-primary",
-            "placeholder:text-gray-500",
+            "placeholder:text-gray-600",
           )}
           placeholder="How can I address you?"
           required
@@ -33,7 +33,7 @@ import Icon from "@/components/core/icon/index.astro";
           class={cx(
             "input input-bordered bg-transparent",
             "focus:border-primary focus:outline-primary",
-            "placeholder:text-gray-500",
+            "placeholder:text-gray-600",
           )}
           placeholder="Contact method: link to social media, email, phone number, etc."
           required
@@ -42,7 +42,7 @@ import Icon from "@/components/core/icon/index.astro";
           class={cx(
             "input input-bordered bg-transparent",
             "focus:border-primary focus:outline-primary",
-            "placeholder:text-gray-500",
+            "placeholder:text-gray-600",
           )}
           placeholder="Tell me about your project"
           required
@@ -50,7 +50,7 @@ import Icon from "@/components/core/icon/index.astro";
 
         <button class="btn btn-primary place-self-start">Send</button>
 
-        <p class="italic text-gray-500">
+        <p class="italic text-gray-600">
           * By clicking "Send", you consent to the processing of your personal data
         </p>
       </div>
@@ -66,18 +66,18 @@ import Icon from "@/components/core/icon/index.astro";
     </aside>
     <nav class="place-self-center justify-self-end">
       <div class="grid grid-flow-col gap-4">
-        <div class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
+        <a class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
           <Icon name="facebook" />
-        </div>
-        <div class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
+        </a>
+        <a class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
           <Icon name="linkedin" />
-        </div>
-        <div class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
+        </a>
+        <a class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
           <Icon name="github" />
-        </div>
-        <div class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
+        </a>
+        <a class="btn btn-circle btn-outline btn-primary size-10 min-h-10 [&>svg]:size-6">
           <Icon name="email" />
-        </div>
+        </a>
       </div>
     </nav>
   </footer>
