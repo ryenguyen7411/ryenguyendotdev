@@ -19,6 +19,10 @@
   ::-webkit-scrollbar-thumb {
     @apply rounded-sm bg-gray-400;
   }
+
+  ::selection {
+    @apply bg-primary text-primary-content;
+  }
 }
 
 @layer components {

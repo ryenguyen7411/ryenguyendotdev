@@ -3,15 +3,23 @@ import cx from "classix";
 import RyengAvatar from "@/assets/images/ryeng-avatar.png";
 import Icon from "@/components/core/icon/index.astro";
 import Layout from "@/layouts/Layout.astro";
-import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settings/constants.ts";
+import {
+  PARTNERS,
+  PARTNERS_HIGHLIGHT,
+  SERVICES_OFFER,
+  SERVICES_OFFER_HIGHLIGHT,
+  SKILLS_CLOUD,
+  TESTIMONIALS,
+  WORK_EXPERIENCES,
+} from "@/settings/constants.ts";
 ---
 
 <Layout title="ryenguyen7411 - Software Engineer">
-  <div class={cx("container grid place-items-center gap-8", "sm:grid-cols-2 md:gap-32")}>
-    <div class="grid gap-5">
+  <div class={cx("container grid gap-16 mt-8", "sm:grid-cols-2 md:gap-32 md:mt-16")}>
+    <div class="grid grid-flow-row place-items-start gap-5">
       <p class="text-xl font-semibold md:text-2xl">Hi 👋, it's me</p>
 
-      <h1 class="place-self-start bg-primary font-semibold text-gray-400">Rye Nguyen</h1>
+      <h1 class="bg-primary font-semibold text-gray-400">Rye Nguyen</h1>
       <p class="text-xl md:text-2xl">
         I'm a&nbsp;<span class="typewriter font-semibold"></span>
       </p>
@@ -22,32 +30,32 @@ import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settin
         <a href="https://be.com.vn" class="font-semibold text-primary">Be Group</a> as a software engineer.
       </p>
 
-      <div class="flex gap-4">
-        <div class="btn btn-circle btn-outline btn-primary">
+      <div class="grid grid-flow-col gap-4">
+        <a class="btn btn-circle btn-outline btn-primary">
           <Icon name="facebook" />
-        </div>
-        <div class="btn btn-circle btn-outline btn-primary">
+        </a>
+        <a class="btn btn-circle btn-outline btn-primary">
           <Icon name="linkedin" />
-        </div>
-        <div class="btn btn-circle btn-outline btn-primary">
+        </a>
+        <a class="btn btn-circle btn-outline btn-primary">
           <Icon name="github" />
-        </div>
-        <div class="btn btn-circle btn-outline btn-primary">
+        </a>
+        <a class="btn btn-circle btn-outline btn-primary">
           <Icon name="email" />
-        </div>
+        </a>
       </div>
-
-      <div class="btn btn-primary place-self-start">Request CV copy</div>
+      <a class="btn btn-primary mt-5">Request CV copy</a>
     </div>
-    <div class={cx("flex items-center min-h-[400px] mt-8", "-sm:-order-1")}>
+
+    <div class={cx("flex items-center min-h-[400px]", "-sm:-order-1 -sm:mt-16")}>
       <div class="hexagon">
         <img src={RyengAvatar.src} alt="Rye Nguyen" class="rounded-lg" />
       </div>
     </div>
   </div>
 
-  <div class={cx("container mt-16 grid gap-16", "md:mt-32 md:gap-32 sm:grid-cols-2")}>
-    <div class="flex flex-col gap-8">
+  <div class={cx("container grid gap-16 mt-16", "sm:grid-cols-2 md:gap-32 md:mt-32")}>
+    <div class="grid gap-5">
       <div class="flex-1"></div>
 
       <h2 class="text-2xl md:text-3xl">Services |<br />Offer</h2>
@@ -59,16 +67,16 @@ import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settin
 
       <div class="flex-1"></div>
 
-      <ul class="grid gap-2 text-center md:grid-flow-col">
+      <ul class="grid grid-flow-col text-center md:gap-2">
         {
           SERVICES_OFFER_HIGHLIGHT.map((service, idx) => (
             <>
               <li>
                 <h3 class="text-2xl text-primary">{service.title}</h3>
-                <p>{service.description}</p>
+                <p class="text-gray-600">{service.description}</p>
               </li>
               {idx < SERVICES_OFFER_HIGHLIGHT.length - 1 && (
-                <li class="divider divider-neutral md:divider-horizontal" />
+                <li class={cx("divider divider-neutral divider-horizontal mx-2 -md:w-0")} />
               )}
             </>
           ))
@@ -83,50 +91,146 @@ import { SERVICES_OFFER, SERVICES_OFFER_HIGHLIGHT, SKILLS_CLOUD } from "@/settin
             <div class="btn btn-circle btn-primary row-span-2">
               <Icon name={service.icon} />
             </div>
-            <p>{service.description}</p>
+            <p class="text-gray-600">{service.description}</p>
           </li>
         ))
       }
     </ul>
+  </div>
 
-    <div class="grid place-items-center gap-8 sm:col-span-2">
-      <h2 class="text-3xl">Skills cloud</h2>
+  <div class={cx("container grid place-items-center gap-5 mt-16", "md:mt-32")}>
+    <h2 class="text-2xl md:text-3xl">My Work Experiences</h2>
 
-      <div class="scroller sm:max-w-[600px]" data-speed="fast">
-        <ul class="scroller__inner">
-          {
-            SKILLS_CLOUD.core.map((skill) => (
-              <li class="flex items-center gap-1">
-                <span>{skill.title}</span>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+    <ul class="timeline timeline-vertical timeline-snap-icon gap-8 -md:timeline-compact">
+      {
+        WORK_EXPERIENCES.map((experience) => (
+          <li>
+            <div class="timeline-middle md:mx-32 -md:mr-4">
+              <Icon name="blabla" />
+            </div>
 
-      <div class="scroller sm:max-w-[600px]" data-direction="right">
-        <ul class="scroller__inner">
-          {
-            SKILLS_CLOUD.other.map((skill) => (
-              <li class="flex items-center gap-1">
-                <span>{skill.title}</span>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+            <div class={cx("timeline-start grid gap-2", "!self-start !justify-self-start")}>
+              <h3>{experience.company}</h3>
+              <time class="italic">
+                {experience.startDate}
+                {experience.endDate ? ` - ${experience.endDate}` : ""}
+              </time>
+              <p class="text-gray-600">{experience.location}</p>
+            </div>
+            <div class="timeline-end grid gap-2">
+              <h3 class="text md:text-xl">
+                <span class="font-light text-gray-600 md:hidden">Position: </span>
+                {experience.title}
+              </h3>
+              <p class="text-gray-600">{experience.description}</p>
+            </div>
+            <hr />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class={cx("container grid place-items-center gap-5 mt-16", "md:mt-32")}>
+    <h2 class="text-2xl md:text-3xl">Skills cloud</h2>
+
+    <div class="scroller sm:max-w-[600px]" data-speed="fast">
+      <ul class="scroller__inner">
+        {
+          SKILLS_CLOUD.core.map((skill) => (
+            <li class="flex items-center gap-1">
+              <span>{skill.title}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="scroller sm:max-w-[600px]" data-direction="right">
+      <ul class="scroller__inner">
+        {
+          SKILLS_CLOUD.other.map((skill) => (
+            <li class="flex items-center gap-1">
+              <span>{skill.title}</span>
+            </li>
+          ))
+        }
+      </ul>
     </div>
   </div>
+
+  <div class={cx("container mt-16 grid gap-16", "md:gap-32 md:mt-32")}>
+    <div class="grid place-items-center gap-5">
+      <div class="badge badge-primary badge-outline">Testimonial</div>
+      <h2 class="max-w-[600px] text-center text-2xl md:text-3xl">
+        I have worked with various companies to help them grow their business.
+      </h2>
+
+      <div class="carousel gap-4 rounded-box py-1">
+        {
+          TESTIMONIALS.map((testimonial) => (
+            <div
+              class={cx(
+                "card carousel-item flex-col bg-gray-300",
+                "max-w-full sm:max-w-[calc(50%-8px)] md:max-w-[calc(100%/3-32px/3)]",
+              )}
+            >
+              <div class="card-body">
+                <p>{testimonial.description}</p>
+                <div class="flex items-center gap-3">
+                  <img src={testimonial.avatar} alt={testimonial.name} class="w-10 rounded-full" />
+                  <div class="flex-1">
+                    <h3 class="text">{testimonial.name}</h3>
+                    <p>{testimonial.designation}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="grid place-items-center gap-8">
+      <h2 class="text-2xl md:text-3xl">Trusted Partner's</h2>
+
+      <div class="grid w-full grid-cols-5 gap-8">
+        {
+          PARTNERS.map((partner) => (
+            <div title={partner.name}>
+              <img src={partner.logo} alt={partner.name} class="h-full w-full object-contain" />
+            </div>
+          ))
+        }
+      </div>
+
+      <ul class="grid max-w-[600px] grid-flow-col text-center md:gap-2">
+        {
+          PARTNERS_HIGHLIGHT.map((stat, idx) => (
+            <>
+              <li>
+                <h3 class="text-2xl text-primary">{stat.title}</h3>
+                <p class="text-gray-600">{stat.description}</p>
+              </li>
+              {idx < PARTNERS_HIGHLIGHT.length - 1 && (
+                <li class="divider divider-neutral divider-horizontal mx-2 -md:w-0" />
+              )}
+            </>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <style>
+    @import "@/assets/styles/partials/hexagon-avatar.css";
+    @import "@/assets/styles/partials/typewriter-anim.css";
+    @import "@/assets/styles/partials/scroller.css";
+  </style>
+
+  <script>
+    import { addScrollerAnimation } from "@/utils/scroller.ts";
+
+    addScrollerAnimation();
+  </script>
 </Layout>
-
-<style>
-  @import "@/assets/styles/partials/hexagon-avatar.css";
-  @import "@/assets/styles/partials/typewriter-anim.css";
-  @import "@/assets/styles/partials/scroller.css";
-</style>
-
-<script>
-  import { addScrollerAnimation } from "@/utils/scroller.ts";
-
-  addScrollerAnimation();
-</script>
