@@ -1,1 +1,20 @@
 @tailwind components;
+
+@layer components {
+  .glow-list {
+    > * {
+      @apply relative;
+      @apply grayscale;
+      @apply cursor-pointer;
+
+      &:hover {
+        @apply grayscale-0;
+        text-shadow:
+        0 0 25px rgb(var(--color-yellow-700) / 25%),
+        0 0 50px rgb(var(--color-yellow-700) / 50%),
+        0 0 75px rgb(var(--color-yellow-700) / 75%),
+        0 0 100px rgb(var(--color-yellow-700) / 100%)
+      }
+    }
+  }
+}

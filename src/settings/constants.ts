@@ -6,16 +6,16 @@ import LogoMetawire from "@/assets/images/logo-metawire.png";
 
 export const SERVICES_OFFER_HIGHLIGHT = [
   {
-    title: "100+",
-    description: "Ipsum sequi doloremque inventore ad",
+    title: "8+",
+    description: "Year of experience in software development",
   },
   {
-    title: "80%",
-    description: "Adipisicing assumenda laudantium ipsum",
+    title: "50+",
+    description: "Projects successfully completed on time",
   },
   {
     title: "4.7",
-    description: "Ipsum maxime odit impedit minima",
+    description: "Positive rating received from clients",
   },
 ];
 
